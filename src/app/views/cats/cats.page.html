@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Catbreeds</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title class="ion-text-center" size="large">Catbreeds</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div *ngFor="let cat of catsData">
+    <ion-card>
+      <h2><strong>Raza:</strong> {{cat?.name}}</h2>
+      <div>
+        <app-image-viewer
+          [referenceImageId]="cat.reference_image_id"
+        ></app-image-viewer>
+      </div>
+      <div class="cat-info">
+        <h6><strong>Origen: </strong>{{cat?.origin}}</h6>
+        <h6><strong>Inteligencia: </strong>{{cat?.intelligence}}</h6>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>
