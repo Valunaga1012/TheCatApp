@@ -1,0 +1,7 @@
+{
+  "name": "TheCatApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
